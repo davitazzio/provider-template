@@ -67,10 +67,13 @@ spec:
               forProvider:
                 description: MyTypeParameters are the configurable fields of a MyType.
                 properties:
-                  configurableField:
+                  nodeAddress:
+                    type: string
+                  resourceToDownload:
                     type: string
                 required:
-                - configurableField
+                - nodeAddress
+                - resourceToDownload
                 type: object
               managementPolicies:
                 default:
