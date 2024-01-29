@@ -1,4 +1,6 @@
-apiVersion: meta.pkg.crossplane.io/v1
+apiVersion: pkg.crossplane.io/v1
+# meta.pkg.crossplane.io/v1
+# pkg.crossplane.io/v1
 kind: Provider
 metadata:
   name: provider-template
@@ -14,6 +16,21 @@ spec:
   packagePullPolicy: Always
   revisionActivationPolicy: Automatic
   revisionHistoryLimit: 0
+  # controller:
+  #   image: docker.io/datavix/prova
+  #   permissionRequest:
+  #     verbs: '*'
+  # crossplane:
+  #   version: 'v1.14.5'
+  
+
+
+
+  # ignoreCrossplaneConstraints: true
+  # package: docker.io/datavix/prova
+  # packagePullPolicy: Always
+  # revisionActivationPolicy: Automatic
+  # revisionHistoryLimit: 0
     # permissionRequests:
     # - apiGroups:
     #   - apiextensions.crossplane.io

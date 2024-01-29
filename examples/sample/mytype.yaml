@@ -4,6 +4,7 @@ metadata:
   name: example
 spec:
   forProvider:
-    configurableField: test
+    nodeAddress: test
+    resourceToDownload: test
   providerConfigRef:
-    name: example
+    name: default

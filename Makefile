@@ -108,7 +108,7 @@ dev-clean: $(KIND) $(KUBECTL)
 # Special Targets
 
 # Install gomplate
-GOMPLATE_VERSION := 3.10.0
+GOMPLATE_VERSION := 3.11.7
 GOMPLATE := $(TOOLS_HOST_DIR)/gomplate-$(GOMPLATE_VERSION)
 
 $(GOMPLATE):
