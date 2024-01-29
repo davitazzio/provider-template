@@ -1,0 +1,46 @@
+apiVersion: pkg.crossplane.io/v1
+# meta.pkg.crossplane.io/v1
+# pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-template
+  annotations:
+    meta.crossplane.io/maintainer: Crossplane Maintainers <info@crossplane.io>
+    meta.crossplane.io/source: github.com/crossplane/provider-template
+    meta.crossplane.io/license: Apache-2.0
+    meta.crossplane.io/description: |
+      A template that can be used to create Crossplane providers.
+spec:
+  ignoreCrossplaneConstraints: true
+  package: docker.io/datavix/prova
+  packagePullPolicy: Always
+  revisionActivationPolicy: Automatic
+  revisionHistoryLimit: 0
+  # controller:
+  #   image: docker.io/datavix/prova
+  #   permissionRequest:
+  #     verbs: '*'
+  # crossplane:
+  #   version: 'v1.14.5'
+  
+
+
+
+  # ignoreCrossplaneConstraints: true
+  # package: docker.io/datavix/prova
+  # packagePullPolicy: Always
+  # revisionActivationPolicy: Automatic
+  # revisionHistoryLimit: 0
+    # permissionRequests:
+    # - apiGroups:
+    #   - apiextensions.crossplane.io
+    #   resources:
+    #   - compositions
+    #   verbs:
+    #   - get
+    #   - list
+    #   - create
+    #   - update
+    #   - patch
+    #   - watch
+    # registry.gitlab.com/sabbio93/slicesansible:VERSION

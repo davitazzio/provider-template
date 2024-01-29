@@ -27,7 +27,8 @@ import (
 
 // MyTypeParameters are the configurable fields of a MyType.
 type MyTypeParameters struct {
-	ConfigurableField string `json:"configurableField"`
+	NodeAddress        string `json:"nodeAddress"`
+	ResourceToDownload string `json:"resourceToDownload"`
 }
 
 // MyTypeObservation are the observable fields of a MyType.
