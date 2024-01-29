@@ -60,15 +60,17 @@ func main() {
 
 	zl := zap.New(zap.UseDevMode(*debug))
 	log := logging.NewLogrLogger(zl.WithName("provider-template"))
-	if *debug {
-		// The controller-runtime runs with a no-op logger by default. It is
-		// *very* verbose even at info level, so we only provide it a real
-		// logger when we're running in debug mode.
-		ctrl.SetLogger(zl)
-	}
+	// if *debug {
+	// The controller-runtime runs with a no-op logger by default. It is
+	// *very* verbose even at info level, so we only provide it a real
+	// logger when we're running in debug mode.
+	ctrl.SetLogger(zl)
+	// }
 
 	cfg, err := ctrl.GetConfig()
 	kingpin.FatalIfError(err, "Cannot get API server rest config")
+
+	log.Debug("ciao mamma come stai sono il main")
 
 	mgr, err := ctrl.NewManager(ratelimiter.LimitRESTConfig(cfg, *maxReconcileRate), ctrl.Options{
 		SyncPeriod: syncInterval,

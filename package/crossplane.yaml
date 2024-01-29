@@ -1,4 +1,12 @@
-apiVersion: pkg.crossplane.io/v1
+# apiVersion: pkg.crossplane.io/v1alpha1
+# kind: ControllerConfig
+# metadata:
+#   name: debug-config
+# spec:
+#   args:
+#     - --debug
+# ---
+apiVersion: meta.pkg.crossplane.io/v1
 # meta.pkg.crossplane.io/v1
 # pkg.crossplane.io/v1
 kind: Provider
@@ -12,10 +20,12 @@ metadata:
       A template that can be used to create Crossplane providers.
 spec:
   ignoreCrossplaneConstraints: true
-  package: docker.io/datavix/prova
+  package: docker.io/datavix/prova6
   packagePullPolicy: Always
   revisionActivationPolicy: Automatic
   revisionHistoryLimit: 0
+  controllerConfigRef: 
+    name: debug-config
   # controller:
   #   image: docker.io/datavix/prova
   #   permissionRequest:
