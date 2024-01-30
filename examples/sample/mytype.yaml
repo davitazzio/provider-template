@@ -1,10 +1,10 @@
 apiVersion: sample.template.crossplane.io/v1alpha1
 kind: MyType
 metadata:
-  name: giampaolo
+  name: giampi4
 spec:
   forProvider:
-    nodeAddress: localhost
+    nodeAddress: dtazzioli-kubernetes.cloudmmwunibo.it
     resourceToDownload: test
   providerConfigRef:
     name: default
