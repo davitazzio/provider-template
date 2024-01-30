@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-ngix
+spec:
+  selector:
+    matchLabels:
+      app: hello-ngix
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello-ngix
+    spec:
+      containers:
+      - name: hello-ngix
+        image: "docker.io/datavix/hello-ngix:latest"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-ngix
+spec:
+  type: NodePort
+  selector:
+    app: hello-ngix
+  ports:
+  - protocol: TCP
+    port: 8080
+
+
+
+
