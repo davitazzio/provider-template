@@ -7,7 +7,6 @@ require (
 	github.com/crossplane/crossplane-tools v0.0.0-20230714144037-2684f4bc7638
 	github.com/google/go-cmp v0.5.9
 	github.com/pkg/errors v0.9.1
-	golang.org/x/crypto v0.11.0
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 	k8s.io/apimachinery v0.27.4
 	k8s.io/client-go v0.27.4
